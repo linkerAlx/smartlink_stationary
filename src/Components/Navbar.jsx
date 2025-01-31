@@ -2,6 +2,7 @@ import { FaLanguage } from "react-icons/fa6";
 import { navLinks } from "../Constants";
 import { BsPersonCircle } from "react-icons/bs";
 import { CgShoppingCart } from "react-icons/cg";
+import { FaHome } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -34,6 +35,7 @@ const Navbar = () => {
 
       {/* Icons and Sign Up */}
       <div className="flex items-center gap-4">
+      <span className="text-2xl"><FaHome/></span>
         <span className="text-2xl"><FaLanguage/></span>
         <span className="text-2xl"><CgShoppingCart/></span>
         <span className="text-2xl"><BsPersonCircle/></span>
