@@ -43,7 +43,7 @@ const Navbar = () => {
 
           {/* Icons */}
           <div className="flex items-center gap-5 text-2xl">
-            <FaHome className="hover:text-[#A68868] transition cursor-pointer" />
+            <a href="/"> <FaHome className="hover:text-[#A68868] transition cursor-pointer" /></a>           
             <FaLanguage className="hover:text-[#A68868] transition cursor-pointer" />
             <CgShoppingCart className="hover:text-[#A68868] transition cursor-pointer" />
             <BsPersonCircle className="hover:text-[#A68868] transition cursor-pointer" />
@@ -76,13 +76,11 @@ const Navbar = () => {
 
       {/* Bottom Navbar (Fixed for Small Screens) */}
       <div className="fixed bottom-0 left-0 w-full bg-[#071739] flex justify-around items-center py-3 lg:hidden shadow-md">
-        <FaHome className="text-2xl hover:text-[#A68868] transition cursor-pointer" />
+      <a href="/"> <FaHome className="hover:text-[#A68868] transition cursor-pointer" /></a>  
         <FaLanguage className="text-2xl hover:text-[#A68868] transition cursor-pointer" />
         <CgShoppingCart className="text-2xl hover:text-[#A68868] transition cursor-pointer" />
         <BsPersonCircle className="text-2xl hover:text-[#A68868] transition cursor-pointer" />
-        <button className="bg-[#CDD5DB] text-black font-bold px-4 py-1 rounded-full hover:bg-[#B5C1C8] transition">
-          SIGN UP
-        </button>
+      
       </div>
     </nav>
   );

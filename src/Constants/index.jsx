@@ -1,8 +1,8 @@
 export const navLinks = [
-    { id: "products", title: "Products", url: "#" },
+    { id: "products", title: "Products", url: "/productpg" },
     { id: "services", title: "Services", url: "#" },
-    { id: "about", title: "About Us", url: "#" },
-    { id: "contact", title: "Contact Us", url: "#" },
+    { id: "about", title: "About Us", url: "/aboutpg" },
+    { id: "contact", title: "Contact Us", url: "/contactpg" },
   ];
   // src/constants/products.js
 

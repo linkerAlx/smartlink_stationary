@@ -4,7 +4,7 @@ import ProductCards from "./ProductCards";
 
 const Homepg = () => {
   return (
-    <div className="bg-[#CDD5DB] min-h-screen p-6  mt-16"> 
+    <div className="bg-[#CDD5DB] min-h-screen p-6 mt-16 "> 
       {/* Added pb-20 to push content above the fixed navbar */}
 
       {/* Header Section */}
@@ -62,6 +62,10 @@ const Homepg = () => {
           ))}
         </div>
       </div>
+      <button className="bg-[#B28C63] text-white px-4 py-2 rounded-full mt-6 w-60 text-sm md:text-base block mx-auto text-center">
+  View More 
+</button>
+
     </div>
   );
 };
