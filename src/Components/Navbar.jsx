@@ -71,6 +71,7 @@ const Navbar = () => {
               {link.title}
             </a>
           ))}
+           <a href="/" className="hover:text-[#A68868] transition text-lg cursor-pointer"> Home</a>
         </div>
       )}
 
