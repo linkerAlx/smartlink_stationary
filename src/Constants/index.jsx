@@ -75,5 +75,13 @@ export const categories = [
       image: "https://images.pexels.com/photos/3829441/pexels-photo-3829441.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
+
+   export const CONTACT_INFO = {
+    title: "Get in Touch",
+    description: "Smartlink Station – Bridging the Gap, One Message at a Time!",
+    location: "Rwanda, Southern Province, Muhanga",
+    email: "inezalinker@gmail.com",
+    phone: "+250-783-653-651",
+  };
   
   

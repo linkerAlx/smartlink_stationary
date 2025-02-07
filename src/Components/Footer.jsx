@@ -1,6 +1,6 @@
 import React from 'react';
 import { navLinks } from '../Constants';
-import { FaAddressBook, FaWhatsapp } from 'react-icons/fa6';
+import { FaLocationDot, FaWhatsapp } from 'react-icons/fa6';
 import { FaInstagram, FaPhone } from 'react-icons/fa';
 import { MdDiscount, MdEmail, MdInsertInvitation } from 'react-icons/md';
 import { BsMegaphone } from 'react-icons/bs';
@@ -45,7 +45,7 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Contact Us</h4>
             <p className="mb-2 flex items-center"> <FaPhone className="mr-2" /> +250-783-653-651</p>
             <p className="mb-2 flex items-center"> <MdEmail className="mr-2" /> inezalinkera@gmail.com</p>
-            <p className="mt-2 flex items-center"> <FaAddressBook className="mr-2" /> Rwanda, Southern province, Muhanga District</p>
+            <p className="mt-2 flex items-center"> <FaLocationDot className="mr-2" /> Rwanda, Southern province, Muhanga District</p>
           </div>
 
           {/* Subscription Section */}
