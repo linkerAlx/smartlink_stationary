@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import Aboutpage from "./pages/Aboutpage";
 import Contactpage from "./pages/Contactpage";
 import Productspage from "./pages/Productspage";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contactpg" element={<Contactpage />} />
         <Route path="/productpg" element={<Productspage />} />
       </Routes>
+      <Footer/>
       </div>
   );
 }

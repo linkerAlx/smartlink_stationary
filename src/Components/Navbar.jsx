@@ -19,8 +19,7 @@ const Navbar = () => {
 
         {/* Search Bar (Hidden on Small Screens) */}
         <div className="hidden lg:flex items-center bg-[#CDD5DB] rounded-full px-4 py-2 w-1/3 shadow-md">
-          <span className="text-black text-lg mr-2">🔍</span>
-          <input
+                   <input
             type="text"
             placeholder="WHAT ARE YOU LOOKING FOR?"
             className="bg-transparent text-black outline-none text-sm flex-1"
@@ -43,8 +42,7 @@ const Navbar = () => {
 
           {/* Icons */}
           <div className="flex items-center gap-5 text-2xl">
-            <a href="/"> <FaHome className="hover:text-[#A68868] transition cursor-pointer" /></a>           
-            <FaLanguage className="hover:text-[#A68868] transition cursor-pointer" />
+          <FaLanguage className="hover:text-[#A68868] transition cursor-pointer" />
             <CgShoppingCart className="hover:text-[#A68868] transition cursor-pointer" />
             <BsPersonCircle className="hover:text-[#A68868] transition cursor-pointer" />
           </div>
@@ -71,7 +69,7 @@ const Navbar = () => {
               {link.title}
             </a>
           ))}
-           <a href="/" className="hover:text-[#A68868] transition text-lg cursor-pointer"> Home</a>
+         
         </div>
       )}
 
