@@ -52,11 +52,11 @@ const Homepg = () => {
       </div>
 
       {/* Top Picks */}
-      <div className="mt-10">
+      <div className="mt-10 ">
         <h2 className="text-xl font-semibold text-[#071739] mb-4">
           <span className="text-[#A68868]">Top </span>Picks
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1  m-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <ProductCards key={product.id} product={product} />
           ))}

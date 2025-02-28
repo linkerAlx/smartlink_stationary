@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaLanguage, FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { BsPersonCircle } from "react-icons/bs";
 import { CgShoppingCart } from "react-icons/cg";
+import { Link } from "react-router-dom"; // Import Link
 import { navLinks } from "../Constants";
 
 const Navbar = () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
 
         {/* Search Bar (Hidden on Small Screens) */}
         <div className="hidden lg:flex items-center bg-[#CDD5DB] rounded-full px-4 py-2 w-1/3 shadow-md">
-                   <input
+          <input
             type="text"
             placeholder="WHAT ARE YOU LOOKING FOR?"
             className="bg-transparent text-black outline-none text-sm flex-1"
@@ -42,15 +43,17 @@ const Navbar = () => {
 
           {/* Icons */}
           <div className="flex items-center gap-5 text-2xl">
-          <FaLanguage className="hover:text-[#A68868] transition cursor-pointer" />
+            <FaLanguage className="hover:text-[#A68868] transition cursor-pointer" />
             <CgShoppingCart className="hover:text-[#A68868] transition cursor-pointer" />
             <BsPersonCircle className="hover:text-[#A68868] transition cursor-pointer" />
           </div>
 
-          {/* Sign Up Button */}
-          <button className="bg-[#CDD5DB] text-black font-bold px-4 py-2 rounded-full hover:bg-[#B5C1C8] transition">
-            SIGN UP
-          </button>
+          {/* Sign Up Button (Link to Sign Up Page) */}
+          <Link to="/signuppg">
+            <button className="bg-[#CDD5DB] text-black font-bold px-4 py-2 rounded-full hover:bg-[#B5C1C8] transition">
+              SIGN UP
+            </button>
+          </Link>
         </div>
 
         {/* Hamburger Menu for Small Screens */}
@@ -69,17 +72,15 @@ const Navbar = () => {
               {link.title}
             </a>
           ))}
-         
         </div>
       )}
 
       {/* Bottom Navbar (Fixed for Small Screens) */}
       <div className="fixed bottom-0 left-0 w-full bg-[#071739] flex justify-around items-center py-3 lg:hidden shadow-md">
-      <a href="/"> <FaHome className="hover:text-[#A68868] transition cursor-pointer" /></a>  
+        <a href="/"> <FaHome className="hover:text-[#A68868] transition cursor-pointer" /></a>  
         <FaLanguage className="text-2xl hover:text-[#A68868] transition cursor-pointer" />
         <CgShoppingCart className="text-2xl hover:text-[#A68868] transition cursor-pointer" />
         <BsPersonCircle className="text-2xl hover:text-[#A68868] transition cursor-pointer" />
-      
       </div>
     </nav>
   );

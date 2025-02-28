@@ -151,9 +151,21 @@ export const TeamMember = ({ name, role }) => (
     <p className="text-gray-400 text-sm">{role}</p>
   </div>
 </div>
-
-
 );
+// FormFields.js
+
+export const SIGNUP_FIELDS = [
+  { name: 'name', type: 'text', placeholder: 'Enter your full name' },
+  { name: 'email', type: 'email', placeholder: 'Enter your email address' },
+  { name: 'password', type: 'password', placeholder: 'Enter your password' }
+];
+
+export const LOGIN_FIELDS = [
+  { name: 'email', type: 'email', placeholder: 'Enter your email address' },
+  { name: 'password', type: 'password', placeholder: 'Enter your password' }
+];
+
+
 
   
   
