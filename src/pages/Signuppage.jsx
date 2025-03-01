@@ -23,7 +23,7 @@ const Signuppage = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#071739] py-6 px-4  mt-16">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg sm:w-full md:w-3/4 lg:w-1/2">
+      <div className="bg-[#CDD5DB] p-8 rounded-lg shadow-lg w-full max-w-lg sm:w-full md:w-3/4 lg:w-1/2">
         {/* SmartLink Stationary Title */}
         <div className="text-center mb-2">
           <h1 className="text-3xl font-extrabold text-[#A68868]">SmartLink Stationary</h1>
