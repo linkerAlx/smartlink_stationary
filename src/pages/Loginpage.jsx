@@ -1,23 +1,30 @@
 // Loginpage.js
-import React, { useState } from 'react';
-import { LOGIN_FIELDS } from '../Constants';
-import { Link } from 'react-router-dom'; // Import Link for navigation to Sign Up page
+import { useState } from "react";
+import { LOGIN_FIELDS } from "../Constants";
+import { Link } from "react-router-dom"; // Import Link for navigation to Sign Up page
+import { loginUser } from "../Components/data";
 
 const Loginpage = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: "",
   });
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    setError("");
     // Handle backend authentication here
+    const data = await loginUser(formData);
+    console.log(data);
+    if (!data.token) {
+      return setError(data.message);
+    }
   };
 
   return (
@@ -25,17 +32,25 @@ const Loginpage = () => {
       <div className="bg-[#CDD5DB] p-8 rounded-lg shadow-lg w-full max-w-lg sm:w-full md:w-3/4 lg:w-1/2">
         {/* SmartLink Stationary Title */}
         <div className="text-center mb-2">
-          <h1 className="text-3xl font-extrabold text-[#A68868]">SmartLink Stationary</h1>
-          <p className="text-lg font-light text-[#071739]">Where Creativity Meets Innovation</p>
+          <h1 className="text-3xl font-extrabold text-[#A68868]">
+            SmartLink Stationary
+          </h1>
+          <p className="text-lg font-light text-[#071739]">
+            Where Creativity Meets Innovation
+          </p>
         </div>
 
-        <h2 className="text-2xl font-bold text-center mb-4 text-[#071739]">Log In</h2>
+        <h2 className="text-2xl font-bold text-center mb-4 text-[#071739]">
+          Log In
+        </h2>
 
         {/* Login Form */}
         <form onSubmit={handleSubmit}>
           {LOGIN_FIELDS.map((field) => (
             <div key={field.name} className="mb-4">
-              <label className="block text-sm font-medium text-[#071739]">{field.placeholder.split(' ')[0]}</label>
+              <label className="block text-sm font-medium text-[#071739]">
+                {field.placeholder.split(" ")[0]}
+              </label>
               <input
                 type={field.type}
                 name={field.name}
@@ -47,7 +62,15 @@ const Loginpage = () => {
               />
             </div>
           ))}
-          <button type="submit" className="w-full bg-[#A68868] text-white font-bold py-2 px-4 rounded-full hover:bg-[#8f725a] transition-all duration-300">
+          {error && (
+            <div className="text-red-700 text-lg italic mt-2 bg-red-700/15 text-center mb-2 rounded-2xl p-2 font-semibold">
+              {error}
+            </div>
+          )}
+          <button
+            type="submit"
+            className="w-full bg-[#A68868] text-white font-bold py-2 px-4 rounded-full hover:bg-[#8f725a] transition-all duration-300"
+          >
             Log In
           </button>
         </form>
@@ -55,7 +78,7 @@ const Loginpage = () => {
         {/* Sign Up Option Link */}
         <div className="mt-4 text-center">
           <p className="text-sm text-[#071739]">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{" "}
             <Link to="/signuppg" className="text-[#A68868] hover:underline">
               Sign Up here
             </Link>
